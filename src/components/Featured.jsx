@@ -34,6 +34,7 @@ const Featured = () => {
               name={item.name}
               price={item.current_price}
               changePercentage={item.price_change_percentage_24h}
+              updated={item.last_updated}
             />
           ))}
         </div>
