@@ -6,7 +6,7 @@ const Navbar = () => {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
   return (
-    <header className='header'>
+    <header className={`header`}>
       <div className='container'>
         <h1>
           De<span className='primary'>Fe</span>

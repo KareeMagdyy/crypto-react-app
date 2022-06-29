@@ -50,7 +50,8 @@
     flex-direction: column;
     justify-content: start;
     top: 90px;
-    right: -100%;
+    /* right: -100%; */
+    transform: translateX(200%);
     width: 50%;
     height: 100vh;
     transition: 0.4s;
@@ -60,7 +61,7 @@
   }
 
   .nav-menu.active {
-    right: 0;
+    transform: translateX(100%);
   }
 
   .nav-menu li {

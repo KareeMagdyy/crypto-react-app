@@ -35,6 +35,9 @@
 }
 
 @media screen and (max-width: 940px) {
+  .featured {
+    clip-path: polygon(0 0, 100% 6%, 100% 100%, 0 94%);
+  }
   .featured .container {
     grid-template-columns: 1fr;
   }
