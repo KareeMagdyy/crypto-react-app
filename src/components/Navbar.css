@@ -46,7 +46,7 @@
   }
 
   .nav-menu {
-    position: absolute;
+    position: fixed;
     flex-direction: column;
     justify-content: start;
     top: 90px;

@@ -13,16 +13,24 @@ const Navbar = () => {
         </h1>
         <ul className={`nav-menu ${click && "active"}`}>
           <li>
-            <a href='#home'>Home</a>
+            <a href='#home' onClick={handleClick}>
+              Home
+            </a>
           </li>
           <li>
-            <a href='#featured'>Features</a>
+            <a href='#featured' onClick={handleClick}>
+              Features
+            </a>
           </li>
           <li>
-            <a href='#earn'>Earn</a>
+            <a href='#earn' onClick={handleClick}>
+              Earn
+            </a>
           </li>
           <li>
-            <a href='#contact'>Contact</a>
+            <a href='#contact' onClick={handleClick}>
+              Contact
+            </a>
           </li>
         </ul>
         <div className='btn-group'>
