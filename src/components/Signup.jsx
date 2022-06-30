@@ -3,7 +3,7 @@ import "./Signup.css";
 
 const Signup = () => {
   return (
-    <section className='signup'>
+    <section className='signup' id='earn'>
       <div className='container'>
         {/* leftSide */}
         <div className='left'>

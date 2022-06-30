@@ -1,7 +1,14 @@
 import { FiArrowUpRight, FiArrowDown } from "react-icons/fi";
 import "./CoinCard.css";
 
-const CoinCard = ({ img, name, price, changePercentage, updated }) => {
+const CoinCard = ({
+  img,
+  name,
+  price,
+  changePercentage,
+  updated,
+  currency,
+}) => {
   const lastUpdated = Date.parse(updated);
   const currentTime = Date.parse(new Date().toISOString());
   const lastUpdatedTime = currentTime - lastUpdated;
@@ -9,7 +16,6 @@ const CoinCard = ({ img, name, price, changePercentage, updated }) => {
   const lastUpdatedTimeHours = lastUpdatedTimeMins / 60;
 
   let lastUpdateRender = "";
-
   if (lastUpdatedTimeMins < 1) {
     lastUpdateRender = "Just Updated";
   } else if (lastUpdatedTimeMins > 0 && lastUpdatedTimeMins < 60) {
@@ -22,6 +28,22 @@ const CoinCard = ({ img, name, price, changePercentage, updated }) => {
     }`;
   }
 
+  let currencySymbol = "";
+
+  if (currency === "EUR") {
+    currencySymbol = "€";
+  } else if (currency === "GBP") {
+    currencySymbol = "£";
+  } else if (currency === "SAR") {
+    currencySymbol = "SR ";
+  } else if (currency === "AED") {
+    currencySymbol = "AED ";
+  } else if (currency === "SEK") {
+    currencySymbol = "kr ";
+  } else {
+    currencySymbol = "$";
+  }
+
   return (
     <div className='card'>
       <div className='top'>
@@ -29,7 +51,10 @@ const CoinCard = ({ img, name, price, changePercentage, updated }) => {
       </div>
       <div>
         <h5>{name}</h5>
-        <p>${price.toLocaleString()}</p>
+        <p>
+          {currencySymbol}
+          {price.toLocaleString()}
+        </p>
       </div>
       <span>
         {changePercentage < 0 ? (
