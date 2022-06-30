@@ -9,7 +9,7 @@ const Navbar = () => {
     <header className={`header`}>
       <div className='container'>
         <h1>
-          De<span className='primary'>Fe</span>
+          De<span className='primary'>Fi</span>
         </h1>
         <ul className={`nav-menu ${click && "active"}`}>
           <li>
